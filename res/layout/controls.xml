@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pinned above the list on tablets, first list item on phones -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/controls"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Shown until AppLock is device owner -->
+    <LinearLayout
+        android:id="@+id/not_owner_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_bg"
+        android:padding="20dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/not_owner_title"
+            android:textColor="@color/status_warn"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/not_owner_body"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:textIsSelectable="true" />
+    </LinearLayout>
+
+    <!-- Install switch -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/card_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/install_title"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/install_body"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/switch_install"
+            android:foreground="@drawable/focus_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_hint"
+        android:textSize="15sp"
+        android:singleLine="true"
+        android:inputType="text"
+        android:imeOptions="actionSearch|flagNoExtractUi"
+        android:minHeight="48dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/filter_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/filter_launchable" style="@style/BtnChip"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/filter_launchable" />
+            <Button android:id="@+id/filter_user" style="@style/BtnChip"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/filter_user" />
+            <Button android:id="@+id/filter_system" style="@style/BtnChip"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/filter_system" />
+            <Button android:id="@+id/filter_hidden" style="@style/BtnChip"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/filter_hidden" />
+            <Button android:id="@+id/filter_suspended" style="@style/BtnChip"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/filter_suspended" />
+            <Button android:id="@+id/filter_all" style="@style/BtnChip"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/filter_all" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Column headings, widths match item_app.xml -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/col_app"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/col_suspend"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/col_hide"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

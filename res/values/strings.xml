@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppLock</string>
+
+    <string name="btn_unlock">Unlock</string>
+    <string name="btn_lock">Lock</string>
+    <string name="btn_top">Back to top</string>
+
+    <string name="not_owner_title">Not device owner</string>
+    <string name="not_owner_body">AppLock can\'t change anything until it\'s set as device owner. Remove all accounts first, then run:\n\nadb shell dpm set-device-owner com.flipphoneguy.applock/.AdminReceiver</string>
+
+    <string name="install_title">Allow installing apps</string>
+    <string name="install_body">Off blocks all app installs and updates, including the Play Store.</string>
+
+    <string name="search_hint">Search name or package</string>
+    <string name="filter_launchable">Launchable</string>
+    <string name="filter_user">Installed</string>
+    <string name="filter_system">System</string>
+    <string name="filter_hidden">Hidden</string>
+    <string name="filter_suspended">Suspended</string>
+    <string name="filter_all">All</string>
+
+    <string name="col_app">App</string>
+    <string name="col_suspend">Suspend</string>
+    <string name="col_hide">Hide</string>
+    <string name="apps_loading">Loading apps…</string>
+    <string name="apps_empty">No apps match.</string>
+    <string name="apps_load_failed">Couldn\'t load apps: %s</string>
+
+    <string name="btn_change_password">Change password</string>
+    <string name="btn_remove">Remove AppLock</string>
+    <string name="remove_body">Unhides and unsuspends every app, lifts all restrictions, gives up device owner, then asks to uninstall AppLock.</string>
+
+    <string name="pw_title_unlock">Enter password</string>
+    <string name="pw_title_set">Set a password</string>
+    <string name="pw_title_change">New password</string>
+    <string name="pw_hint">Password</string>
+    <string name="pw_hint_confirm">Confirm password</string>
+    <string name="pw_show">Show password</string>
+    <string name="pw_wrong">Wrong password</string>
+    <string name="pw_mismatch">Passwords don\'t match</string>
+    <string name="pw_too_short">Use at least 4 characters</string>
+    <string name="pw_saved">Password saved</string>
+    <string name="pw_was_reset">Password was reset by this build. Set a new one.</string>
+
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <string name="toggle_failed">Android refused to change %s</string>
+
+    <string name="update_picked_wrong">That APK isn\'t AppLock</string>
+    <string name="update_wrong_key">That APK isn\'t signed with AppLock\'s key</string>
+    <string name="update_older">That APK (v%1$s) isn\'t newer than the installed one (v%2$s)</string>
+    <string name="update_confirm">Install AppLock v%s?</string>
+    <string name="update_installing">Installing update…</string>
+    <string name="update_failed">Update failed: %s</string>
+    <string name="update_checking">Checking for updates…</string>
+    <string name="update_up_to_date">You\'re on the latest version (v%s)</string>
+    <string name="update_check_failed">Couldn\'t check for updates: %s</string>
+    <string name="update_no_release">No release found</string>
+    <string name="update_available_title">Update available</string>
+    <string name="update_available">AppLock v%1$s is available. You have v%2$s.</string>
+    <string name="update_downloading">Downloading v%s…</string>
+    <string name="update_busy">An update is already downloading</string>
+    <string name="btn_update_now">Update</string>
+    <string name="btn_later">Later</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="btn_back">Back</string>
+    <string name="theme_title">Theme</string>
+    <string name="theme_system">System default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="updates_title">Updates</string>
+    <string name="check_on_launch">Check for updates on launch</string>
+    <string name="btn_check_update">Check for updates</string>
+    <string name="btn_update_file">Update from APK file</string>
+    <string name="links_title">Links</string>
+    <string name="btn_github_profile">GitHub profile</string>
+    <string name="btn_app_repo">AppLock on GitHub</string>
+
+    <string name="remove_confirm_title">Remove AppLock?</string>
+    <string name="remove_unhide_failed_title">Some apps won\'t unhide</string>
+    <string name="remove_unhide_failed">Android refused to unhide:\n\n%s\n\nIf you remove AppLock anyway, these will stay hidden until a factory reset.</string>
+    <string name="btn_remove_anyway">Remove anyway</string>
+    <string name="remove_still_owner">Android didn\'t release device owner. Nothing was uninstalled.</string>
+</resources>

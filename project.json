@@ -1,0 +1,8 @@
+{
+    "package": "com.flipphoneguy.applock",
+    "name": "AppLock",
+    "min_sdk": 28,
+    "target_sdk": 34,
+    "repo": "flipphoneguy/applock",
+    "github_profile": "https://github.com/flipphoneguy"
+}

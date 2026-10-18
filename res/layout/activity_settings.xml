@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_page">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="@color/bg_header"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="12dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:focusedByDefault="true"
+            style="@style/BtnHeader"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="←"
+            android:textSize="20sp"
+            android:contentDescription="@string/btn_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:text="@string/settings_title"
+            android:textColor="@color/text_on_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.flipphoneguy.applock.MaxWidthLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- App -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg"
+                android:padding="20dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Theme -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg"
+                android:padding="20dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_theme"
+                    style="@style/BtnOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- Updates -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg"
+                android:padding="20dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/updates_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/check_on_launch"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <Switch
+                        android:id="@+id/switch_check_on_launch"
+                        android:foreground="@drawable/focus_ring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_check_update"
+                    style="@style/BtnPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/btn_check_update" />
+
+                <TextView
+                    android:id="@+id/update_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_update_file"
+                    style="@style/BtnOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/btn_update_file" />
+            </LinearLayout>
+
+            <!-- Links -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg"
+                android:padding="20dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/links_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_github_profile"
+                    style="@style/BtnOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/btn_github_profile" />
+
+                <Button
+                    android:id="@+id/btn_app_repo"
+                    style="@style/BtnOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/btn_app_repo" />
+            </LinearLayout>
+
+            <!-- Password and removal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg"
+                android:padding="20dp">
+
+                <Button
+                    android:id="@+id/btn_change_password"
+                    style="@style/BtnOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_change_password" />
+
+                <Button
+                    android:id="@+id/btn_remove"
+                    style="@style/BtnDanger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/btn_remove" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/remove_body"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </com.flipphoneguy.applock.MaxWidthLayout>
+    </ScrollView>
+</LinearLayout>

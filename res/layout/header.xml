@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:background="@color/bg_header"
+    android:gravity="center_vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="12dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/app_name"
+        android:textColor="@color/text_on_primary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_settings"
+        style="@style/BtnHeader"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:text="⚙"
+        android:textSize="20sp"
+        android:contentDescription="@string/settings_title" />
+
+    <Button
+        android:id="@+id/btn_lock"
+        android:focusedByDefault="true"
+        style="@style/BtnHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginLeft="4dp"
+        android:textStyle="bold"
+        android:text="@string/btn_unlock" />
+</LinearLayout>

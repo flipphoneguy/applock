@@ -1,0 +1,6 @@
+build/
+libs/
+tmp/
+*.idsig
+*.apk
+android-sdk-termux.tar.gz

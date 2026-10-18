@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Drawn as a foreground, so it only shows for d-pad focus and leaves touch feedback alone -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <stroke android:width="2dp" android:color="@color/item_focused_border" />
+        </shape>
+    </item>
+    <item>
+        <color android:color="@android:color/transparent" />
+    </item>
+</selector>
